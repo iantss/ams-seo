@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Receptionist for Brow Artists in Leeds | AI Made Simple</title>
+  <meta name="description" content="Stop losing money to clients forgetting appointments. AI Made Simple gives Brow Artists in Leeds an AI receptionist that books, reminds, and follows up automatically. Free trial — no card needed.">
+  <meta property="og:title" content="AI Receptionist for Brow Artists in Leeds">
+  <meta property="og:description" content="The AI tool built for Brow Artists in Leeds. No more clients forgetting appointments. Free trial available.">
+  <meta property="og:url" content="https://go.aimadesimple.uk/ai-for/brow-artists-leeds/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://go.aimadesimple.uk/ai-for/brow-artists-leeds/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"AI Made Simple","applicationCategory":"BusinessApplication","description":"AI receptionist and booking automation for Brow Artists in Leeds","offers":{"@type":"Offer","price":"0","priceCurrency":"GBP","description":"Free trial available"},"areaServed":{"@type":"Place","name":"Leeds"},"url":"https://aimadesimple.uk"}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal: #2a7a6e;
+      --teal-dark: #1f5f56;
+      --teal-light: #e8f5f3;
+      --navy: #0f1f1e;
+      --text: #1a2e2d;
+      --muted: #6b7f7e;
+      --bg: #f5f3ef;
+      --white: #ffffff;
+      --border: #e0ddd8;
+      --warm: #fdf8f3;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    /* NAV */
+    nav {
+      padding: 16px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1rem;
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 32px; height: 32px;
+      background: var(--teal);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1rem;
+    }
+
+    nav a.cta-nav {
+      background: var(--teal);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 100px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    nav a.cta-nav:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+    }
+
+    /* BREADCRUMB */
+    .breadcrumb {
+      padding: 12px 32px;
+      font-size: 0.75rem;
+      color: var(--muted);
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    .breadcrumb a { color: var(--teal); text-decoration: none; }
+    .breadcrumb span { margin: 0 6px; color: var(--border); }
+
+    /* HERO */
+    .hero {
+      background: var(--bg);
+      padding: 72px 32px 80px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: -120px;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(232,245,243,0.8) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; right: -80px;
+      width: 320px; height: 320px;
+      background: radial-gradient(circle, rgba(253,240,220,0.6) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner { position: relative; max-width: 720px; margin: 0 auto; }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 7px 18px;
+      border-radius: 100px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-weight: 500;
+    }
+
+    .hero-badge .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--teal);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.6; transform: scale(0.85); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 10px;
+      letter-spacing: -0.03em;
+      color: var(--navy);
+    }
+
+    .hero h1 .teal { color: var(--teal); }
+
+    .hero-sub-heading {
+      font-size: clamp(1.4rem, 4vw, 2.4rem);
+      font-weight: 900;
+      color: var(--teal);
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--teal);
+      color: white;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--white);
+      color: var(--navy);
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 14px 28px;
+      border-radius: 100px;
+      text-decoration: none;
+      border: 1px solid var(--border);
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .hero-small {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    /* SECTIONS */
+    .section { padding: 72px 32px; }
+    .section-inner { max-width: 860px; margin: 0 auto; }
+    .section-alt { background: var(--white); }
+
+    .section-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-size: clamp(1.5rem, 3.5vw, 2.1rem);
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .section > .section-inner > p,
+    .section-inner > p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      max-width: 580px;
+    }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 560px) { .stats { grid-template-columns: 1fr; } }
+
+    .stat {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+
+    .stat .num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--teal);
+      display: block;
+      letter-spacing: -0.03em;
+    }
+
+    .stat .label {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    /* FEATURES */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 36px;
+    }
+
+    @media (max-width: 560px) { .features-grid { grid-template-columns: 1fr; } }
+
+    .feature {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .feature:hover {
+      border-color: var(--teal);
+      transform: translateY(-2px);
+    }
+
+    .feature-icon {
+      font-size: 1.8rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .feature h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .feature p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* TESTIMONIAL */
+    .testimonial {
+      background: var(--teal);
+      color: white;
+      padding: 64px 32px;
+      text-align: center;
+    }
+
+    .testimonial blockquote {
+      font-size: clamp(1.1rem, 3vw, 1.45rem);
+      font-weight: 700;
+      max-width: 620px;
+      margin: 0 auto 20px;
+      line-height: 1.45;
+      letter-spacing: -0.01em;
+    }
+
+    .testimonial cite {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.65);
+      font-style: normal;
+    }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--teal-light);
+      border-top: 1px solid rgba(42,122,110,0.15);
+      border-bottom: 1px solid rgba(42,122,110,0.15);
+      padding: 18px 32px;
+    }
+
+    .trust-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+    }
+
+    .trust-item {
+      font-size: 0.8rem;
+      color: var(--teal-dark);
+      font-weight: 600;
+    }
+
+    /* FAQ */
+    .faq-list { margin-top: 36px; display: flex; flex-direction: column; gap: 12px; }
+
+    .faq-item {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 26px;
+      transition: border-color 0.2s;
+    }
+
+    .faq-item:hover { border-color: var(--teal); }
+
+    .faq-item h3 {
+      font-size: 0.93rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .faq-item p {
+      font-size: 0.83rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    /* CTA BOTTOM */
+    .cta-bottom {
+      background: var(--navy);
+      padding: 80px 32px;
+      text-align: center;
+      color: white;
+    }
+
+    .cta-bottom h2 {
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -0.03em;
+    }
+
+    .cta-bottom p {
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 36px;
+      font-size: 0.95rem;
+    }
+
+    .cta-bottom .btn-primary {
+      background: var(--teal);
+      font-size: 1rem;
+      padding: 16px 36px;
+    }
+
+    .cta-bottom .btn-primary:hover { background: var(--teal-dark); }
+
+    /* FOOTER */
+    footer {
+      padding: 28px 32px;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+      background: var(--bg);
+    }
+
+    footer a { color: var(--teal); text-decoration: none; }
+    footer p + p { margin-top: 6px; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="https://aimadesimple.uk" class="logo">
+    <div class="logo-icon">⚡</div>
+    AI Made Simple
+  </a>
+  <a href="https://aimadesimple.uk/signup" class="cta-nav">Start Free →</a>
+</nav>
+
+<div class="breadcrumb">
+  <a href="https://aimadesimple.uk">Home</a>
+  <span>›</span>
+  <a href="https://go.aimadesimple.uk/ai-for/">AI For Your Business</a>
+  <span>›</span>
+  Brow Artists in Leeds
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span class="dot"></span>
+      Built for Brow Artists in Leeds
+    </div>
+    <h1>🌟 AI tools for <span class="teal">Brow Artists</span>.</h1>
+    <div class="hero-sub-heading">No jargon. No faff.</div>
+    <p>Stop losing money to clients forgetting appointments. Get an AI receptionist that books clients, sends reminders, and follows up — automatically, 24/7.</p>
+    <div class="hero-buttons">
+      <a href="https://aimadesimple.uk/signup" class="btn-primary">Start Free →</a>
+      <a href="https://aimadesimple.uk" class="btn-secondary">See What's Inside</a>
+    </div>
+    <p class="hero-small">No credit card required · Free forever plan available</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">The Problem</p>
+    <h2>How much are clients forgetting appointments costing you?</h2>
+    <p>Brow Artists in Leeds lose thousands every year to clients forgetting appointments. Every empty slot is money you'll never get back — unless you automate the process.</p>
+    <div class="stats">
+      <div class="stat">
+        <span class="num">£3,200</span>
+        <span class="label">Average annual loss to no-shows</span>
+      </div><div class="stat">
+        <span class="num">6hrs</span>
+        <span class="label">Per week lost to manual admin</span>
+      </div><div class="stat">
+        <span class="num">68%</span>
+        <span class="label">Of clients forget without a reminder</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="section-inner">
+    <p class="section-label">The Solution</p>
+    <h2>Your AI receptionist — working while you work</h2>
+    <p>AI Made Simple gives Brow Artists in Leeds the tools to automate bookings, reminders, and follow-ups without hiring extra staff.</p>
+    <div class="features-grid">
+      <div class="feature">
+        <span class="feature-icon">📅</span>
+        <h3>24/7 Booking</h3>
+        <p>Clients book online any time of day. No more back-and-forth messages to find a slot.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">💬</span>
+        <h3>Automatic Reminders</h3>
+        <p>SMS reminders sent automatically before every appointment. No-shows drop by up to 70%.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">🔄</span>
+        <h3>Rebooking Follow-ups</h3>
+        <p>Clients who don't rebook get a gentle nudge. Keep your diary full without lifting a finger.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">📊</span>
+        <h3>Simple Dashboard</h3>
+        <p>See everything in one place. No complicated software — just what you need, nothing you don't.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial">
+  <blockquote>"Clients forget. That's just reality. The reminders mean they show up — it's transformed my week."</blockquote>
+  <cite>— Brow artist, Leeds</cite>
+</section>
+
+<section class="trust-bar">
+  <div class="trust-inner">
+    <div class="trust-item">🇬🇧 UK-Based Business</div>
+    <div class="trust-item">🔒 GDPR Compliant</div>
+    <div class="trust-item">⚡ Live in 20 Minutes</div>
+    <div class="trust-item">❌ No Contract</div>
+    <div class="trust-item">💳 No Card for Trial</div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-inner">
+    <p class="section-label">Common Questions</p>
+    <h2>Questions from Brow Artists in Leeds</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <h3>How quickly can I get set up?</h3>
+        <p>Most Brow Artists in Leeds are up and running within 20 minutes. No technical knowledge needed — we walk you through everything.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Will it work with my existing booking system?</h3>
+        <p>AI Made Simple works as a standalone system or alongside your existing tools. We'll help you find the right setup for your business.</p>
+      </div>
+      <div class="faq-item">
+        <h3>What if my clients aren't tech-savvy?</h3>
+        <p>The booking experience for your clients is simple — just a link they click to choose a time. No apps to download, no accounts to create.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is there a contract?</h3>
+        <p>No contracts, no lock-in. Start free and upgrade when you're ready. Cancel any time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-bottom">
+  <h2>Stop losing money to clients forgetting appointments.</h2>
+  <p>Join Brow Artists across West Yorkshire already using AI Made Simple.</p>
+  <a href="https://aimadesimple.uk/signup" class="btn-primary">Start Free — No Card Needed →</a>
+</section>
+
+<footer>
+  <p>© 2025 AI Made Simple · <a href="https://aimadesimple.uk">aimadesimple.uk</a> · Built for UK sole traders and small businesses</p>
+  <p style="margin-top:8px;">Serving Brow Artists in Leeds, West Yorkshire and across the UK</p>
+</footer>
+
+</body>
+</html>
